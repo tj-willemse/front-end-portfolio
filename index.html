@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+    <title>Portfolio website</title>
+  </head>
+  <body>
+    <header class="header container">
+      <nav>
+        <ul class="header__menu">
+          <li>
+            <a class="header__link" href="#about">About</a>
+          </li>
+
+          <li>
+            <a class="header__link" href="#featured">Work</a>
+          </li>
+
+          <li>
+            <a class="header__link" href="#contact">Contact</a>
+          </li>
+          <li class="header__line"></li>
+          <li>
+            <button id="theme-toggle" class="header__sun">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z"
+                />
+              </svg>
+            </button>
+          </li>
+
+          <li>
+            <a
+              class="header__resume btn"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              >Resume</a
+            >
+          </li>
+        </ul>
+        <button class="header__bars">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header>
+    <!-- mobile navigation -->
+    <div class="mobile-nav">
+      <nav>
+        <ul class="mobile-nav__menu">
+          <li><a class="mobile-nav__link" href="#about">About</a></li>
+          <li><a class="mobile-nav__link" href="#featured">Work</a></li>
+          <li><a class="mobile-nav__link" href="#contact">Contact</a></li>
+          <li class="mobile-nav__link-line"></li>
+          <li>
+            <button id="theme-toggle" class="mobile-nav__sun">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z"
+                />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a
+              class="mobile-nav__btn btn"
+              href=""
+              >Resume</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- End of mobile navigation -->
+
+    <main>
+      <section class="hero container">
+        <img class="hero__img" src="/public/new.jpg" alt="Profile Picture" />
+        <h2 class="hero__subtitle">Hi I'm Tj</h2>
+        <h1 class="hero__title">
+          Front-end <br />
+          web developer.
+        </h1>
+        <p class="hero__description">
+          A passionate <strong>Frontend web developer</strong> with a love for
+          crafting beautiful, <strong> fully responsive</strong> websites and
+          applications that provide exceptional user experiences!
+        </p>
+        <a class="hero__btn btn" href="#contact">Reach out</a>
+      </section>
+
+      <section id="about" class="about container section">
+        <div class="about__content">
+          <h2 class="about__title">About</h2>
+          <p class="about__description">
+            Hello my name is Tj, a <strong>Frontend web developer</strong> based
+            in South Africa! Each day, I kick off by opening my laptop and
+            diving into building digital experiences that come to life on the
+            web. It’s what I do, day in and day out!
+          </p>
+          <p class="about__description">
+            Those who know me would say I’m <a>obssesed</a> , and they’re
+            right—I’m constantly pushing myself and excited to learn something
+            new every day.
+          </p>
+          <p class="about__description">
+            My main goal is to bring <strong> client's visions</strong> to life,
+            <strong>delivering beautifully responsive websites</strong> they’ve
+            always dreamed of—whether it's a small personal project or a
+            large-scale business site!
+          </p>
+          <hr class="about__hr" />
+
+          <div class="tech-box">
+            <h3 class="about__subtitle">
+              Technologies - Proficient 👍 | In progress 📖
+            </h3>
+          </div>
+          <div class="about__ul-container">
+            <ul class="about__ul">
+              <li class="about__list">
+                <i class="lni lni-javascript icon-yellow"></i> JavaScript (ES+)
+              </li>
+              <li class="about__list">
+                <i class="lni lni-css3 icon-blue"></i> CSS
+              </li>
+              <li class="about__list">
+                <i class="lni lni-html5 icon-orange"></i> HTML
+              </li>
+            </ul>
+
+            <ul class="about__ul">
+              <li class="about__list">
+                <i class="lni lni-github icon-white"></i> Git, Github
+              </li>
+              <li id="react" class="about__list">
+                <i class="lni lni-react icon-baby-blue"></i> ReactJS
+              </li>
+
+              <li id="tail" class="about__list">
+                <i class="lni lni-tailwindcss icon-blue-blue"></i> TailwindCSS
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="about__img-wrapper">
+          <img
+            loading="lazy"
+            class="about__img"
+            src="/public/hero.jpeg"
+            alt="About picture"
+          />
+        </div>
+      </section>
+
+      <section id="featured" class="featured container section">
+        <h3 class="featured__subtitle">Featured Project</h3>
+        <h2 class="featured__title">Designo Website</h2>
+        <p class="featured-paragraph">
+          Designo website, a project that showcases my skills in building
+          beautiful and user-friendly web experiences.
+        </p>
+        <br />
+        <p class="featured-paragraph">
+          The design features a
+          <strong>
+            clean layout, easy navigation, and responsive elements</strong
+          >
+          that look great on any device. This project highlights my commitment
+          to creating high-quality websites that meet my clients' needs.
+        </p>
+        <div class="featured-code-website-buttons">
+          <a target="_blank" href="https://github.com/tj-willemse/designo-multi-page-website">
+          <button class="btn">View Code<i class="lni lni-code"></i></button>
+        </a>
+
+        <a target="_blank" href="https://designo-multi-page-website-beta-taupe.vercel.app/">
+          <button class="btn">
+            Visit Website <i class="lni lni-link"></i>
+          </button>
+        </a>
+        </div>
+        <div class="featured__paragraph-box">
+          <div class="flip-container">
+            <div class="flip-card">
+              <div class="front">
+                <img
+                  class="nice"
+                  src="/public/graphic-design-desktop.png"
+                  alt=""
+                />
+              </div>
+              <div class="back">
+                <img src="/public/home-desktop.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-container">
+            <div class="flip-card">
+              <div class="front">
+                <img src="/public/web-design-desktop.png" alt="" />
+              </div>
+              <div class="back">
+                <img src="/public/app-design-desktop.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-container">
+            <div class="flip-card">
+              <div class="front">
+                <img src="/public/location-desktop.png" alt="" />
+              </div>
+              <div class="back">
+                <img src="/public/contact-desktop.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="featured__projects-box">
+          <div class="featured-projects-text-box">
+            <h1 class="featured-projects-title">Projects</h1>
+            <p class="featured-projects-paragraph">
+              Here are some examples of other projects I've worked on,
+              showcasing my commitment to responsive design and attention to
+              detail in creating visually appealing user experiences.
+            </p>
+          </div>
+
+          <div class="featured-projects-boxes">
+            <div class="featured-projects-img-box">
+              <img
+                class="featured-projects-img"
+                src="/public/payapi-desktop.png"
+                alt=""
+              />
+            </div>
+
+            <div class="featured-projects-text-content">
+              <h3 class="featured-projects-title">Pay-api webiste</h3>
+              <p class="featured-projects-paragraph-site">
+                This project is a multi-page website that showcases a payment
+                API. It features a clean and user-friendly design, allowing easy
+                navigation through sections.
+              </p>
+              <p class="featured-projects-paragraph-site">
+                The site is optimized for both desktop and mobile devices,
+                providing essential information and interactive examples to help
+                developers integrate the payment solution effectively.
+              </p>
+              <div class="featured-code-website-buttons">
+                <a target="_blank" href="https://github.com/tj-willemse/payapi-multi-page-website">
+                <button class="btn">~
+                  View Code<i class="lni lni-code"></i>
+                </button>
+              </a>
+
+              <a target="_blank" href="https://payapi-multi-page-website-chi.vercel.app/">
+                <button class="btn">
+                  Visit Website <i class="lni lni-link"></i>
+                </button>
+              </a>
+              </div>
+              <div class="featured-projects-img-box-two">
+                <img
+                  class="featured-projects-img"
+                  src="/public/pricing-desktop.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+
+
+
+          <div><div class="featured-projects-boxes">
+           
+
+            <div class="featured-projects-text-content">
+              <h3 class="featured-projects-title">The Planets website</h3>
+              <p class="featured-projects-paragraph-site-planets">
+                This project is an interactive website that presents fascinating facts about the planets in our solar system. Users can explore detailed information, including characteristics, images, and unique features of each planet. The site is designed with a clean layout and engaging visuals, making it easy for visitors to navigate and learn. <strong> Try clicking on the images to see some more examples! </strong>
+              </p>
+            
+              <div class="featured-code-website-buttons">
+                <a target="_blank" href="https://github.com/tj-willemse/planet-fact-site">
+                <button class="btn">
+                  View Code<i class="lni lni-code"></i>
+                </button>
+              </a>
+                
+                 <a target="_blank" href="https://planet-fact-site-mu.vercel.app/">
+                <button class="btn">
+                  Visit Website <i class="lni lni-link"></i>
+                </button>
+              </a>
+              </div>
+              <div class="featured-projects-img-box-planets">
+                <img
+                  class="featured-projects-img-planets"
+                  src="/public/planets-desktop-one.png"
+                  alt="Planet One"
+                />
+                <img
+                  class="featured-projects-img-planets"
+                  src="/public/planets-desktop-two.png"
+                  alt="Planet Two"
+                />
+                <img
+                  class="featured-projects-img-planets"
+                  src="/public/planets-desktop-three.png"
+                  alt="Planet Three"
+                />
+              </div>
+            </div>
+          </div>
+
+            
+         
+            <div class="featured-projects-boxes">
+             
+  
+              <div class="featured-projects-text-content">
+                <h3 class="featured-projects-title">A Multi Form</h3>
+                <p class="featured-projects-paragraph-multi">
+                  A user-friendly multi-step form designed to streamline the data collection process. 
+                  It guides users through a series of steps, making it easy to input information without feeling overwhelmed. 
+                 
+                </p>
+                <p class="featured-projects-paragraph-multi">
+                  Each step focuses on a specific set of questions, enhancing the user experience with clear navigation and visual progress indicators. JavaScript is utilized to handle form validations,
+                  manage user input dynamically, and control the flow between steps, ensuring a smooth and interactive experience.
+                </p>
+                <div class="featured-code-website-buttons">
+                  <a target="_blank" href="https://github.com/tj-willemse/multi-step-form">
+                  <button class="btn">
+                    View Code<i class="lni lni-code"></i>
+                  </button>
+                </a>
+
+                <a target="_blank" href="https://multi-step-form-main-umber.vercel.app/">
+                  <button class="btn">
+                    Visit Website <i class="lni lni-link"></i>
+                  </button>
+                </a>
+                </div>
+                <div class="multi-step-box">
+                 
+                 
+                    <div class="step"><img src="/public/multi-step-one.png" alt="Step 1"></div>
+                    <div class="step"><img src="/public/multi-step-two.png" alt="Step 2"></div>
+                    <div class="step"><img src="public/multi-step-3.png" alt="Step 3"></div>
+                    <div class="step"><img src="public/multi-step-4.png" alt="Step 4"></div>
+                    <div class="step"> <img src="public/multi-step-5.png" alt="Step 5"></div>
+                  
+                  
+                </div>
+              </div>
+            </div>
+
+
+            <div class="featured-projects-boxes">
+             
+  
+              <div class="featured-projects-text-content">
+                <h3 class="featured-projects-title">Password Generator App</h3>
+                <p class="featured-projects-paragraph-multi">
+                  A Password Generator App helps users create strong, customizable passwords to enhance online security. Users can select options like password length, inclusion of numbers, symbols, and uppercase or lowercase letters. 
+                
+                </p>
+                <p class="featured-projects-paragraph-multi">
+                  The JavaScript logic behind the app ensures random selection of characters based on the user's choices, using functions to generate and combine characters efficiently. It also validates inputs to ensure users get a password that meets their requirements, making it a practical and secure solution for generating complex passwords.
+                </p>
+                <div class="featured-code-website-buttons">
+                  <a target="_blank" href="https://github.com/tj-willemse/password-generator-app">
+                  <button class="btn">
+                    View Code<i class="lni lni-code"></i>
+                  </button>
+                </a>
+                <a target="_blank" href="https://password-generator-app-black.vercel.app/">
+                  <button class="btn">
+                    Visit Website <i class="lni lni-link"></i>
+                  </button>
+                </a>
+                </div>
+            
+                  <div class="password-box">
+                    <div id="one" ><img class="steps" src="/public/password-1.png" alt=""></div>
+                    <div id="two" ><img class="steps" src="/public/password-2.png" alt=""></div>
+                    <div id="three" ><img class="steps" src="/public/password-3.png" alt=""></div>
+                    <div id="four" ><img class="steps" src="/public/password-4.png" alt=""></div>
+                    <div id="five" ><img class="steps" src= "/public/password-5.png" alt=""></div>
+                    <div id="six" ><img class="steps" src="/public/password-6.png" alt=""></div>
+                  </div>
+               
+          
+               
+               
+            </div>
+
+
+
+          </div>
+         
+        </div>
+      </section>
+
+      <section class="contact container section">
+        <div class="contact__box">
+          <h2 class="contact__title">Get in touch</h2>
+          <p class="contact__description">
+            I am passionate about helping people and businesses achieve their goals by creating beautiful, user-friendly websites that not only look stunning but also provide a seamless user experience. 
+            
+            
+          </p>
+          <a
+            class="hero__btn btn"
+            href="mailto:tjwillemse1@gmail.com"
+            target="_blank"
+            >Reach out</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="footer container section">
+      <h4 class="footer__title">~Tj Willemse~</h4>
+    </footer>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
